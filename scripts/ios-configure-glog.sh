@@ -2,9 +2,8 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 #
 # This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
-
-set -e
+export CC="$(xcrun -find -sdk iphoneos cc) -arch armv7 -isysroot $(xcrun -sdk iphoneos --show-sdk-path)"
+export CXX=$CC
 
 PLATFORM_NAME="${PLATFORM_NAME:-iphoneos}"
 CURRENT_ARCH="${CURRENT_ARCH}"
